@@ -832,14 +832,25 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-[#26262A] py-10 px-6 text-center text-[#6E6E73] text-sm">
-        <p>© 2026 Tesla Trade · Powered by Tesla Ecosystem · All rights reserved.</p>
-        <p className="mt-2 text-xs opacity-70">This is a high-fidelity design recreation for demonstration purposes. In affiliation with Tesla, Inc. and Elon Musk.</p>
-        <p className="mt-4">
-          <Link href="/signup" className="text-[#6E6E73] hover:text-[#E82127] transition text-xs mr-4">Sign Up</Link>
-          <Link href="/login" className="text-[#6E6E73] hover:text-[#E82127] transition text-xs mr-4">Login</Link>
-        </p>
-      </footer>
+<footer className="border-t border-[#26262A] py-10 px-6 text-center text-[#6E6E73] text-sm">
+  <p>© 2026 Tesla Trade · Powered by Tesla Ecosystem And Elon Musk · All rights reserved.</p>
+
+  <p className="mt-4">
+    <Link
+      href="/signup"
+      className="text-[#6E6E73] hover:text-[#E82127] transition text-xs mr-4"
+    >
+      Sign Up
+    </Link>
+
+    <Link
+      href="/login"
+      className="text-[#6E6E73] hover:text-[#E82127] transition text-xs"
+    >
+      Login
+    </Link>
+  </p>
+</footer>
 
       {/* WhatsApp + Live Chat */}
       <div className="fixed bottom-7 right-7 z-40 flex flex-col items-end gap-3">

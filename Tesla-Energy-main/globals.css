@@ -5,12 +5,12 @@
   --tesla-red-hover: #FF3B41;
   --tesla-red-glow: rgba(232, 33, 39, 0.35);
   --bg: #000000;
-  --bg-card: #121214;
-  --bg-card-hover: #1A1A1D;
-  --border: #26262A;
+  --bg-card: #101013;
+  --bg-card-hover: #17171B;
+  --border: #25252A;
   --text: #FFFFFF;
-  --text-secondary: #B0B0B5;
-  --text-muted: #6E6E73;
+  --text-secondary: #B7B7BD;
+  --text-muted: #73737A;
   --success: #30D158;
   --danger: #FF453A;
 }
@@ -26,19 +26,37 @@
   --font-sans: var(--font-geist-sans);
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
+  margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: rgba(232, 33, 39, 0.28); color: #fff; }
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  transition: top 160ms ease;
+}
+.skip-link:focus { top: 16px; }
+
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--tesla-red);
+  outline-offset: 3px;
 }
 
 .tesla-gradient {
@@ -46,7 +64,7 @@ body {
 }
 
 .glass {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -77,4 +95,13 @@ body {
   display: inline-block;
   margin-right: 0.5rem;
   animation: pulse-dot 1.6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

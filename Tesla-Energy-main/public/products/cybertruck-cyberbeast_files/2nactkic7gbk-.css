@@ -1,0 +1,3 @@
+:root{--cookie-consent-surface:var(--background);--cookie-consent-on-primary:var(--background)}
+#onetrust-banner-sdk,#onetrust-pc-sdk,#onetrust-consent-sdk .onetrust-pc-dark-filter,#ot-sdk-btn,#ot-sdk-btn-floating{visibility:hidden!important;pointer-events:none!important;display:none!important}
+/*# sourceMappingURL=2uxx7ykegqzka.css.map*/

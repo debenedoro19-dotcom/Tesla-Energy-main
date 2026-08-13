@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Base high-tech dark canvas */
+html,
+body {
+  background-color: #050508;
+  color: #ffffff;
+}
+
+/* ===== Ambient / 3D-style utilities ===== */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  33% {
+    transform: translateY(-14px) translateX(8px);
+  }
+
+  66% {
+    transform: translateY(10px) translateX(-6px);
+  }
+}
+
+.animate-float {
+  animation: float 9s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 11s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+.glow-red {
+  box-shadow: 0 0 40px rgba(232, 33, 39, 0.25);
+}
+
+.glow-red-strong {
+  box-shadow: 0 0 50px rgba(232, 33, 39, 0.4);
+}
+
+/* Smooth ticker if used */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
